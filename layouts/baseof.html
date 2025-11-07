@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} | Learn how web works</title>
     <meta name="description" content="{{ .Description }}">
+    {{ partial "defaultConsentState.html" . }}
     {{ partial "gtmHead.html" . }}
 </head>
 <body>
@@ -19,6 +20,9 @@
   </main>
 
   <footer>
+    {{ partial "consentBanner.html" . }}
+    {{ $script := resources.Get "js/consent.js" | minify | fingerprint "sha256" }}
+    <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
     &copy; 2025 Learn Google
   </footer>
 </body>

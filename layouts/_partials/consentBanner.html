@@ -1,0 +1,31 @@
+<style>
+  #custom-cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #222;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  #custom-cookie-banner p { margin: 0 20px 0 0; }
+  .cookie-button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .cookie-button.deny { background: #555; }
+</style>
+
+<div id="custom-cookie-banner">
+  <p>We use cookies for analytics and advertising. Do you consent?</p>
+  <button id="cookie-accept-btn" class="cookie-button">Accept All</button>
+  <button id="cookie-deny-btn" class="cookie-button deny">Deny All</button>
+</div>

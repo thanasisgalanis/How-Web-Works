@@ -1,0 +1,18 @@
+<!-- Default Consent State -->
+{{- if hugo.IsProduction -}}
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+</script>
+
+<script>
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+{{- end -}}
+<!-- End Default Consent State -->
